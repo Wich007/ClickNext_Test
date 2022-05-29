@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClickNext</title>
+</head>
+
+<body>
+  <div class="page">
+    <div class="page__sidebar">
+      <div class="sidebar_icon">
+        <div>
+          <mat-icon>flutter_dash</mat-icon>
+        </div>
+        <div class="more_icon">
+          
+          <div class="middle">
+            <mat-icon>event_available</mat-icon>
+            <mat-icon>save_as</mat-icon>
+            <mat-icon>manage_accounts</mat-icon>
+            <mat-icon>lock_person</mat-icon>
+          </div>
+
+          <div class="bottom">
+            <mat-icon>fast_forward</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page__content">
+      <div class="topper">
+        <div class="header">
+          จัดการการประชุม
+        </div>
+        <div class="header-right">
+          <div class="search-noti">
+            <mat-icon>search</mat-icon>
+            <mat-icon matBadge="5">notifications</mat-icon>
+          </div>
+          <div class="user">
+            <div>
+              <button mat-mini-fab color="" aria-label="Example icon button with a filter list icon">
+                <mat-icon>person</mat-icon>
+              </button>
+            </div>
+            <div class="name">
+              {{name}} <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <app-agenda-page></app-agenda-page>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

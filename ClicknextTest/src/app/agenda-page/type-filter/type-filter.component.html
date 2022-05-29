@@ -1,0 +1,18 @@
+<div>
+    <div class="header">ค้นหาประเภทประชุม</div>
+    <div class="checkbox">
+        <!-- <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">เพื่อพิจารณา</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">สืบเนื่อง</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">เพื่อทราบ</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">ขั้นความลับ</label><br> -->
+        <mat-checkbox class="blue" [checked]="type.to_consider" (change)="onChange('to_consider')">เพื่อพิจารณา</mat-checkbox>
+        <mat-checkbox class="green" [checked]="type.continue" (change)="onChange('continue')">สืบเนื่อง</mat-checkbox>
+        <mat-checkbox class="pink" [checked]="type.inform" (change)="onChange('inform')">เพื่อทราบ</mat-checkbox>
+        <mat-checkbox class="orange" [checked]="type.secret" (change)="onChange('secret')">ขั้นความลับ</mat-checkbox>
+
+    </div>
+</div>

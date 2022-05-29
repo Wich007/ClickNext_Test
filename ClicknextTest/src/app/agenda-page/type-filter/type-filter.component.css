@@ -1,0 +1,46 @@
+::ng-deep .blue.mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #135ecb !important;
+}
+
+::ng-deep .blue.mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #135ecb !important;
+}
+
+::ng-deep .green.mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #43c0c4 !important;
+}
+
+::ng-deep .green.mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #43c0c4 !important;
+}
+
+::ng-deep .pink.mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #f16eb2 !important;
+}
+
+::ng-deep .pink.mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #f16eb2 !important;
+}
+
+::ng-deep .orange.mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: #e58640 !important;
+}
+
+::ng-deep .orange.mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #e58640 !important;
+}
+
+.checkbox{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header{
+    color: #989a9c;
+}

@@ -1,0 +1,10 @@
+.header{
+    color: #989a9c;
+}
+
+.checkbox{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

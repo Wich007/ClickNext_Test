@@ -1,0 +1,7 @@
+<div>
+    <div class="header">สถานะเผยแพร่</div>
+    <div class="checkbox">
+        <mat-checkbox class="orange" [checked]="status.published" (change)="onChange('published')" >เผยแพร่</mat-checkbox>
+        <mat-checkbox class="orange" [checked]="status.draft" (change)="onChange('draft')">ไม่เผยแพร่</mat-checkbox>
+    </div>
+</div>

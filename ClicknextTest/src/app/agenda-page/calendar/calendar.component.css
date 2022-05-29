@@ -1,0 +1,15 @@
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  width: 100%;
+}
+
+.example-button-row{
+    padding: 15px;
+}
+
+hr {
+    margin: 0;
+    border-color: #f6f5fa;
+    opacity: 0.3;
+}

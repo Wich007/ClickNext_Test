@@ -1,0 +1,77 @@
+<div *ngFor="let dateEvent of events">
+    <div class="date">
+        {{dateEvent.date}}
+    </div>
+    <div class="event" *ngFor="let event of dateEvent.events">
+        <div class="left">
+            <div>
+                {{event.time}}
+            </div>
+            <div class="type" [class]="event.type">
+            </div>
+            <div>
+                {{event.detail}}
+            </div>
+            <div *ngIf="!event.publish">
+                <button mat-raised-button disabled>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">lock</mat-icon>
+                    ไม่เผยแพร่
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="waitprogress" *ngIf="!event.publish">
+                รอดำเนินการสร้างข้อมูล
+            </div>
+            <div *ngIf="event.publish" >
+                <div *ngIf="event.participants.length === 0">
+                    ยังไม่มีผู้เข้าร่วมประชุม
+                </div>
+                <div *ngIf="event.participants.length > 0">
+                    <div class="participant">
+                        <div class="parricipant-imgs">
+                            <div *ngFor="let participant of event.participants; let i = index">
+                                <div *ngIf="i <= 2">
+                                    <img [src]="participant.imageURL" >
+                                </div>
+                                <div *ngIf="i === 3" class="img-cover">
+                                    <mat-icon class="more">more_horiz</mat-icon>
+                                    <img [src]="participant.imageURL" >
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                ผุ้เข้าร่วม {{event.participants.length}} / {{event.max_participants}} ท่าน
+
+                            </div>
+                            <div>
+                                <mat-progress-bar mode="determinate"
+                                    [value]="(event.participants.length / event.max_participants) * 100">
+                                </mat-progress-bar>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon"  matTooltip="แก้ไข" matTooltipPosition="above">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </div>
+            <div>
+                <button mat-icon-button aria-label="Example icon button with a home icon" [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+</div>
